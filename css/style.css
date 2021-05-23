@@ -65,3 +65,7 @@
 .list-element-style {
     color: rgb(20, 214, 20);
 }
+.table-title  {
+    padding: 20px 20px!important;
+    text-align: center;
+}

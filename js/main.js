@@ -37,19 +37,14 @@ $(document).ready(function () {
             history: $('.history').text(),
             month: $('.month').text(),
         }
-        $('.table').append(`<thead>
-        <tr>
-          <th class="list-element"> ŞEHİR ADI</th>
-          <th class="list-element">DERECE</th>
-          <th class="list-element"> HAVA DURUMU </th>
-          <th class="list-element"> TARİH</span></th>
-        </tr>
-      </thead>
+        $('.table').append(`
+        <thead>
       </tbody> <th class="list-element"><span class="list-element-style">${saveInfo.name}</span></th>
       <th class="list-element"><span class="list-element-style">${saveInfo.degree}</span></th>
       <th class="list-element"><span class="list-element-style">${saveInfo.degreeValueName}</span></th>
       <th class="list-element"><span class="list-element-style">${ saveInfo.history} ${ saveInfo.month}</span></th>
       </tbody>
+      </thead>
      `)
      localStorage.setItem('weather', JSON.stringify(saveInfo))
     })
