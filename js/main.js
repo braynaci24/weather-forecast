@@ -27,5 +27,15 @@ $(document).ready(function () {
             })
         });
     }
-
+    $('.save').click(function(){
+        let saveInfo = {
+            name: $('.city-name').text(),
+            degree:  $('.degree-value').text(),
+            degreeValueName:  $('.degree-value-name').text(),
+            history: $('.history').text(),
+            month: $('.month').text(),
+        }
+        console.log(saveInfo)
+    })
+    
 })
