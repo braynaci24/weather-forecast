@@ -55,9 +55,9 @@
 .save {
     width: 80px;
     height: 40px;
-    background-color: green;
+    background-color: rgb(17, 194, 17);
     border-radius: 5px;
-    border: 1px solid green;
+    border: 1px solid rgb(17, 194, 17);
     color:  #fff;
 }
 .list-element-style {
