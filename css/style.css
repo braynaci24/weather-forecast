@@ -1,0 +1,46 @@
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.searched-city {
+    width: 400px;
+}
+.card-container {
+    width: 400px;
+    height: 500px;
+    background-image: url(../image/background.jpg);
+    background-repeat : no-repeat; 
+    background-position:top center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 20px;
+}
+.degree-value{
+    height: 60px;
+    font-size: 50px;
+}
+.degree{
+    display: flex;
+    flex-direction: column;
+}
+.information {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.status-icon {
+    font-size: 50px;
+    width: 91px;
+}
+.history {
+    font-size: 30px;
+}
+.history-container{
+    display: flex;
+    flex-direction: column;
+}
