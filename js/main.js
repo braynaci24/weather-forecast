@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    let data = JSON.parse(localStorage.getItem('weather')) || []
     let history = new Date();
     let month = ['OCAK', 'ŞUBAT', 'MART', 'NİSAN', 'MAYIS', 'HAZİRAN', 'TEMMUZ', 'AĞUSTOS', 'EYLÜL', 'EKİM', 'KASIM', 'ARALIK'];
     $('.searched-city').keydown(function (e) {
@@ -44,7 +45,7 @@ $(document).ready(function () {
           <th class="list-element"> TARİH: <span class="list-element-style">${ saveInfo.history} ${ saveInfo.month}</span></th>
         </tr>
       </thead>
-     `)
+     ${localStorage.setItem('weather', JSON.stringify(saveInfo))}`)
     })
 
 })
