@@ -39,13 +39,19 @@ $(document).ready(function () {
         }
         $('.table').append(`<thead>
         <tr>
-          <th class="list-element"> ŞEHİR ADI:  <span class="list-element-style">${saveInfo.name}</span></th>
-          <th class="list-element">DERECE:  <span class="list-element-style">${saveInfo.degree}</span></th>
-          <th class="list-element"> HAVA DURUMU:  <span class="list-element-style">${saveInfo.degreeValueName}</span></th>
-          <th class="list-element"> TARİH: <span class="list-element-style">${ saveInfo.history} ${ saveInfo.month}</span></th>
+          <th class="list-element"> ŞEHİR ADI</th>
+          <th class="list-element">DERECE</th>
+          <th class="list-element"> HAVA DURUMU </th>
+          <th class="list-element"> TARİH</span></th>
         </tr>
       </thead>
-     ${localStorage.setItem('weather', JSON.stringify(saveInfo))}`)
+      </tbody> <th class="list-element"><span class="list-element-style">${saveInfo.name}</span></th>
+      <th class="list-element"><span class="list-element-style">${saveInfo.degree}</span></th>
+      <th class="list-element"><span class="list-element-style">${saveInfo.degreeValueName}</span></th>
+      <th class="list-element"><span class="list-element-style">${ saveInfo.history} ${ saveInfo.month}</span></th>
+      </tbody>
+     `)
+     localStorage.setItem('weather', JSON.stringify(saveInfo))
     })
 
 })
