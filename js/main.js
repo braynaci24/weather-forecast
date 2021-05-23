@@ -18,7 +18,7 @@ $(document).ready(function () {
             $('.history').text(history.getDate());
             $('.month').text(month[history.getMonth()]);
             $('.status-icon').html('<img src="http://openweathermap.org/img/wn/' + data.weather[0].icon + '@2x.png">');
-
+            $('.save').show();
         }).fail(function () {
             Swal.fire({
                 icon: 'error',
@@ -27,6 +27,7 @@ $(document).ready(function () {
             })
         });
     }
+    
     $('.save').click(function () {
         let saveInfo = {
             name: $('.city-name').text(),
@@ -47,5 +48,6 @@ $(document).ready(function () {
      `)
         localStorage.setItem('saveWeather', JSON.stringify(saveInfo))
     })
+ 
 
 })
