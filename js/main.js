@@ -23,7 +23,7 @@ $(document).ready(function () {
             Swal.fire({
                 icon: 'error',
                 title: 'DİKKAT',
-                text: 'LÜTFEN BİR ŞEHİR İSMİ GİRİNİZ20',
+                text: 'LÜTFEN BİR ŞEHİR İSMİ GİRİNİZ',
             })
         });
     }
