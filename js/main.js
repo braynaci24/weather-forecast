@@ -46,8 +46,9 @@ $(document).ready(function () {
             <th class="list-element">${ saveInfo.history} ${ saveInfo.month}</th>
         </tr>
      `)
+     
+     localStorage.setItem('weather', JSON.stringify(saveInfo))
 
-        localStorage.setItem('weather', JSON.stringify(saveInfo))
     })
 
 })
