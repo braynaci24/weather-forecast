@@ -44,3 +44,22 @@
     display: flex;
     flex-direction: column;
 }
+.list-element {
+    text-align: center;
+    width: 200px;
+}
+.icon {
+    width: 20px ;
+    height: 20px;
+}
+.save {
+    width: 80px;
+    height: 40px;
+    background-color: green;
+    border-radius: 5px;
+    border: 1px solid green;
+    color:  #fff;
+}
+.list-element-style {
+    color: rgb(20, 214, 20);
+}

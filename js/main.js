@@ -18,7 +18,7 @@ $(document).ready(function () {
             $('.history').text(history.getDate());
             $('.month').text(month[history.getMonth()]);
             $('.status-icon').html('<img src="http://openweathermap.org/img/wn/' + data.weather[0].icon + '@2x.png">');
-            
+
         }).fail(function () {
             Swal.fire({
                 icon: 'error',
@@ -27,15 +27,25 @@ $(document).ready(function () {
             })
         });
     }
-    $('.save').click(function(){
+    $('.save').click(function () {
         let saveInfo = {
             name: $('.city-name').text(),
-            degree:  $('.degree-value').text(),
-            degreeValueName:  $('.degree-value-name').text(),
+            degree: $('.degree-value').text(),
+            degreeValueName: $('.degree-value-name').text(),
             history: $('.history').text(),
             month: $('.month').text(),
+            icon: $('.status-icon').html(),
         }
-        console.log(saveInfo)
+        $('.table').append(`<thead>
+        <tr>
+          <th class="list-element"> ŞEHİR ADI:  <span class="list-element-style">${saveInfo.name}</span></th>
+          <th class="list-element">DERECE:  <span class="list-element-style">${saveInfo.degree}</span></th>
+          <th class="list-element"> HAVA DURUMU:  <span class="list-element-style">${saveInfo.degreeValueName}</span></th>
+          <th class="list-element"> TARİH: <span class="list-element-style">${ saveInfo.history} ${ saveInfo.month}</span></th>
+        </tr>
+      </thead>
+     `)
+        localStorage.setItem('saveWeather', JSON.stringify(saveInfo))
     })
-    
+
 })
