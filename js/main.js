@@ -13,7 +13,7 @@ $(document).ready(function () {
     function getWeatherData(cityname) {
         let url = "https://api.openweathermap.org/data/2.5/weather?q=" + cityname + "&units=metric&lang=tr&appid=c6fbcef60aef10c84cef90ea86309961"
         $.get(url, function (data) {
-            $('.city-name').text(data.name.toUpperCase());
+            $('.city-name').text(data.name);
             $('.degree-value').text(parseInt(data.main.temp_min));
             $('.degree-value-name').text(data.weather[0].description);
             $('.history').text(history.getDate());
@@ -37,16 +37,17 @@ $(document).ready(function () {
             history: $('.history').text(),
             month: $('.month').text(),
         }
+
         $('.table').append(`
-        <thead>
-      </tbody> <th class="list-element"><span class="list-element-style">${saveInfo.name}</span></th>
-      <th class="list-element"><span class="list-element-style">${saveInfo.degree}</span></th>
-      <th class="list-element"><span class="list-element-style">${saveInfo.degreeValueName}</span></th>
-      <th class="list-element"><span class="list-element-style">${ saveInfo.history} ${ saveInfo.month}</span></th>
-      </tbody>
-      </thead>
+            <tbody> 
+            <th class="list-element">${saveInfo.name}</th>
+            <th class="list-element">${saveInfo.degree}</th>
+            <th class="list-element">${saveInfo.degreeValueName}</th>
+            <th class="list-element">${ saveInfo.history} ${ saveInfo.month}</th>
+            </tbody>
      `)
-     localStorage.setItem('weather', JSON.stringify(saveInfo))
+     
+        localStorage.setItem('weather', JSON.stringify(saveInfo))
     })
 
 })

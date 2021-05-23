@@ -49,6 +49,8 @@
     height: 50px;
     padding: 20px 10px!important;
     text-align: center;
+    color: rgb(20, 214, 20);
+
 }
 .icon {
     width: 20px ;
@@ -63,7 +65,6 @@
     color:  #fff;
 }
 .list-element-style {
-    color: rgb(20, 214, 20);
 }
 .table-title  {
     padding: 20px 20px!important;
