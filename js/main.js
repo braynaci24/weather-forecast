@@ -38,15 +38,15 @@ $(document).ready(function () {
             month: $('.month').text(),
         }
 
-        $('.table').append(`
-            <tbody> 
+        $('.tbody-container').append(`
+        <tr>
             <th class="list-element">${saveInfo.name}</th>
             <th class="list-element">${saveInfo.degree}</th>
             <th class="list-element">${saveInfo.degreeValueName}</th>
             <th class="list-element">${ saveInfo.history} ${ saveInfo.month}</th>
-            </tbody>
+        </tr>
      `)
-     
+
         localStorage.setItem('weather', JSON.stringify(saveInfo))
     })
 
