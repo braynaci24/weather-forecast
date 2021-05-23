@@ -27,7 +27,7 @@ $(document).ready(function () {
             })
         });
     }
-    
+
     $('.save').click(function () {
         let saveInfo = {
             name: $('.city-name').text(),
@@ -35,7 +35,6 @@ $(document).ready(function () {
             degreeValueName: $('.degree-value-name').text(),
             history: $('.history').text(),
             month: $('.month').text(),
-            icon: $('.status-icon').html(),
         }
         $('.table').append(`<thead>
         <tr>
@@ -47,6 +46,5 @@ $(document).ready(function () {
       </thead>
      `)
     })
- 
 
 })
