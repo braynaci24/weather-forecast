@@ -46,7 +46,6 @@ $(document).ready(function () {
         </tr>
       </thead>
      `)
-        localStorage.setItem('saveWeather', JSON.stringify(saveInfo))
     })
  
 
